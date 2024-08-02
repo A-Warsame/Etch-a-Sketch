@@ -8,6 +8,11 @@ function makeGrid(size) {
         for(let j = 0; j < size; j++) {
             let cell = document.createElement('div');
             cell.className = 'cell';
+
+            cell.addEventListener("mouseover", function (e) {
+                e.target.style.background = "blue";
+            });
+            
             row.appendChild(cell);
         }
         container.appendChild(row);
@@ -15,5 +20,3 @@ function makeGrid(size) {
 }
 
 makeGrid(16);
-
-
