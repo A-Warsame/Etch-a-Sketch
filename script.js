@@ -24,3 +24,10 @@ function addHoverEffect() {
 
 makeGrid(16);
 addHoverEffect();
+
+function resetGridColor(){
+    const cells = document.querySelectorAll('.cell');
+    cells.forEach(cell => {
+        cell.style.backgroundColor = "white";
+    });
+}
