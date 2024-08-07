@@ -9,7 +9,7 @@ function makeGrid(size) {
             let cell = document.createElement('div');
             cell.className = 'cell';
             cell.addEventListener("mouseover", function(e) {
-                e.target.style.background = "blue";
+                e.target.style.background = getRandomRainbowColor();
             });
             row.appendChild(cell);
         }
@@ -17,12 +17,7 @@ function makeGrid(size) {
     }
 }
 
-function resetGridColor() {
-    const cells = document.querySelectorAll('.cell');
-    cells.forEach(cell => {
-        cell.style.backgroundColor = "white";
-    });
-}
+makeGrid(16);
 
 function newGrid() {
     let number = prompt("How many squares per side for the new grid? (Max 100)");
@@ -35,4 +30,8 @@ function newGrid() {
     }
 }
 
-makeGrid(16);
+// Function to generate a random rainbow color
+function getRandomRainbowColor() {
+    const hue = Math.floor(Math.random() * 360);
+    return `hsl(${hue}, 100%, 50%)`;
+}
