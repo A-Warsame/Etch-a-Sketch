@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 body {
     display: flex;
     flex-direction: column;
@@ -5,7 +7,26 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    background-color: #ADD8E6;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    color: white; 
+    text-align: center; 
+    padding: 20px; 
+    font-size: 2.5em; 
+    font-family: 'Pacifico', cursive;
+  }
+
+footer {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 1em;
 }
 
 #container {
@@ -25,4 +46,5 @@ body {
     flex: 1;
     border: 1px solid #ddd;
     box-sizing: border-box;
+    background-color: #f0f0f0;
 }
